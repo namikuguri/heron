@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * Theme: Seabird
+ * Theme: Heron
  * Author: namikuguri
  * Description: ブログの記事に集中しやすいテーマです。
  * Responsive: yes
@@ -12,7 +12,6 @@
 * 3. Module
 * 4. Page
 * 5. Animation
-* 6. Customize
 ==================== */
 /********************
 * Base
@@ -1030,33 +1029,3 @@ a.keyword {
     transform: translateX(0); }
   100% {
     transform: translateX(4px); } }
-
-/********************
-* Customize
-*********************/
-/* --- フッターの配置調整 & はてなモジュールのタイトルを消す --- */
-#box2-inner {
-  margin: 0 auto;
-  max-width: 40rem; }
-  #box2-inner .hatena-module-title {
-    display: none; }
-
-/* --- プロフィールの画像、名前、読者ボタンを横並びに --- */
-.hatena-module-profile .hatena-module-body {
-  display: flex;
-  align-items: center; }
-
-.hatena-module-profile .profile-icon {
-  margin-bottom: 0; }
-
-.hatena-module-profile .hatena-follow-button-box {
-  margin-top: 0;
-  margin-left: auto; }
-
-/* --- 記事内モジュール ---*/
-.entry-content .custom-image-centered img {
-  margin-left: auto;
-  margin-right: auto; }
-
-.entry-content .custom-image-full img {
-  width: 100%; }
