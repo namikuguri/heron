@@ -1,2 +1,2 @@
-# Amagasa HatenaBlog Theme
-Amagasa theme for HatenaBlog.
+# Heron HatenaBlog Theme
+Heron theme for HatenaBlog.
