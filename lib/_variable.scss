@@ -1,0 +1,67 @@
+// ====================
+// Font
+// ====================
+$font-family: -apple-system, BlinkMacSystemFont, ".SFNSDisplay-Regular",
+              "Helvetica Neue",
+              "Segoe UI",
+              "Hiragino Sans", "ヒラギノ角ゴシック",
+              "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3",
+              Meiryo, "メイリオ",
+              "MS PGothic", "ＭＳ Ｐゴシック",
+              sans-serif;
+$font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+// ====================
+// Color
+// ====================
+$base-color: #0000ff;
+
+$white: calc-color($base-color, 0, 100, 100);
+$black: calc-color($base-color, 0, 100, -32);
+$gray: calc-color($base-color, 0, 100, 30);
+$light-gray: calc-color($base-color, 0, 100, 46);
+$dark-gray: calc-color($base-color, 0, 100, 5);
+$theme-color: $base-color;
+$theme-sub-color: calc-color($base-color, -76, 0, 10);
+$code-color: calc-color($base-color, 82, 0, 5);
+$highlight-color: calc-color($base-color, -180, 0, 0);
+
+// ====================
+// Ratio
+// ====================
+$base-ratio: 1.414;
+
+$short-ratio: $base-ratio - 1;
+$neg-short-ratio: 1 - $short-ratio;
+$neg-ratio: 1 + $neg-short-ratio;
+
+// ====================
+// Size
+// ====================
+$base-size: 1rem;
+
+$half-size: $base-size / 2;
+$quarter-size: $base-size / 4;
+$double-size: $base-size * 2;
+$large-size: $base-size * $base-ratio;
+$xlarge-size: $large-size * $base-ratio;
+$xxlarge-size: $xlarge-size * $base-ratio;
+$xxxlarge-size: $xxlarge-size * $base-ratio;
+$small-size: $base-size * .875;
+$content-size: $base-size * 40;
+
+// ====================
+// Radius
+// ====================
+$r: 3px;
+
+// ====================
+// Opacity
+// ====================
+$opacity: .75;
+
+// ====================
+// Animation
+// ====================
+$delay: .3s;
+$delay-long: .5s;

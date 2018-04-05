@@ -1,0 +1,108 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@fand/hatena-blog-theme-boilerplate",
+        "scope": "@fand",
+        "escapedName": "@fand%2fhatena-blog-theme-boilerplate",
+        "name": "@fand/hatena-blog-theme-boilerplate",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/cw-takemoto"
+    ]
+  ],
+  "_from": "@fand/hatena-blog-theme-boilerplate@latest",
+  "_id": "@fand/hatena-blog-theme-boilerplate@0.1.0",
+  "_inCache": true,
+  "_location": "/@fand/hatena-blog-theme-boilerplate",
+  "_nodeVersion": "8.3.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/hatena-blog-theme-boilerplate-0.1.0.tgz_1503298036441_0.7594970215577632"
+  },
+  "_npmUser": {
+    "name": "fand",
+    "email": "fand.gmork@gmail.com"
+  },
+  "_npmVersion": "5.3.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@fand/hatena-blog-theme-boilerplate",
+    "scope": "@fand",
+    "escapedName": "@fand%2fhatena-blog-theme-boilerplate",
+    "name": "@fand/hatena-blog-theme-boilerplate",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/@fand/hatena-blog-theme-boilerplate/-/hatena-blog-theme-boilerplate-0.1.0.tgz",
+  "_shasum": "72201f40bbc27a1b06451d5b06654ef56a2a2e7c",
+  "_shrinkwrap": null,
+  "_spec": "@fand/hatena-blog-theme-boilerplate",
+  "_where": "/Users/cw-takemoto",
+  "author": {
+    "name": "fand",
+    "email": "fand@gmork.in"
+  },
+  "bin": {
+    "hbt": "bin/cli.sh"
+  },
+  "bugs": {
+    "url": "https://github.com/fand/hatena-blog-theme-boilerplate/issues"
+  },
+  "dependencies": {
+    "normalize.css": "^4.2.0"
+  },
+  "description": "A boilerplate for Hatena Blog theme using Sass and ITCSS",
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "chokidar-cli": "^1.2.0",
+    "gulp-sass": "^3.2.1",
+    "less": "^2.7.1",
+    "less-plugin-clean-css": "^1.5.1",
+    "less-plugin-glob": "^1.1.1",
+    "node-sass": "^3.8.0",
+    "node-sass-globbing": "0.0.23",
+    "npm-run-all": "^3.0.0"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-4Aaf1v9AUE923JCQfLuBPDNg21prqYITrP2hZoCyqRS/p7CUJf2j8CaBENjIY/fR9m098oyGhYGX/IYOcXs5CQ==",
+    "shasum": "72201f40bbc27a1b06451d5b06654ef56a2a2e7c",
+    "tarball": "https://registry.npmjs.org/@fand/hatena-blog-theme-boilerplate/-/hatena-blog-theme-boilerplate-0.1.0.tgz"
+  },
+  "gitHead": "4aec8b914b6fe3b9430fdc05023d5846d4c4a3d0",
+  "homepage": "https://github.com/fand/hatena-blog-theme-boilerplate/issues",
+  "license": "MIT",
+  "main": "theme-style.css",
+  "maintainers": [
+    {
+      "name": "fand",
+      "email": "fand@gmork.in"
+    }
+  ],
+  "name": "@fand/hatena-blog-theme-boilerplate",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fand/hatena-blog-theme-boilerplate.git"
+  },
+  "scripts": {
+    "build": "[ -f lib/theme-style.scss ] && npm run build:scss || npm run build:less",
+    "build:less": "lessc --include-path=lib lib/theme-style.less theme-style.css",
+    "build:scss": "node-sass --include-path=lib lib/theme-style.scss -o .",
+    "serve": "browser-sync start -c bs-config.js",
+    "start": "npm-run-all -p watch serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "[ -f lib/theme-style.scss ] && npm run watch:scss || npm run watch:less",
+    "watch:less": "chokidar 'lib/**/*.less' -c 'npm run build:less'",
+    "watch:scss": "chokidar 'lib/**/*.scss' -c 'npm run build:scss'"
+  },
+  "version": "0.1.0"
+}

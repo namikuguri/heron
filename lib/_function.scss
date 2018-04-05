@@ -1,0 +1,15 @@
+// 色の算出
+@function calc-color($color, $hue, $saturation, $lightness) {
+  @if $lightness < 0 { // 明度の指定が負の値なら darken() 関数を使う
+    @return darken(desaturate(adjust-hue($color, $hue), $saturation), abs($lightness)) // abs() でマイナスを削除して数値の絶対値を返す
+  }
+
+  @else { // 明度の指定が正の値なら lighten() 関数を使う
+    @return lighten(desaturate(adjust-hue($color, $hue), $saturation), $lightness)
+  }
+}
+
+// background-image に指定した SVG の色指定
+@function url-friendly-colour($colour) {
+    @return '%23' + str-slice('#{$colour}', 2, -1)
+}

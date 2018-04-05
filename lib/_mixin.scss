@@ -1,0 +1,13 @@
+@mixin clear {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin break {
+  @media screen and (min-width: #{$content-size}) {
+    @content;
+  }
+}
