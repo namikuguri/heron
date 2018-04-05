@@ -56,7 +56,9 @@
     "url": "https://github.com/fand/hatena-blog-theme-boilerplate/issues"
   },
   "dependencies": {
-    "normalize.css": "^4.2.0"
+    "autoprefixer": "^8.2.0",
+    "normalize.css": "^4.2.0",
+    "postcss-cli": "^5.0.0"
   },
   "description": "A boilerplate for Hatena Blog theme using Sass and ITCSS",
   "devDependencies": {
@@ -102,7 +104,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "[ -f lib/theme-style.scss ] && npm run watch:scss || npm run watch:less",
     "watch:less": "chokidar 'lib/**/*.less' -c 'npm run build:less'",
-    "watch:scss": "chokidar 'lib/**/*.scss' -c 'npm run build:scss'"
+    "watch:scss": "chokidar 'lib/**/*.scss' -c 'npm run build:scss'",
+    "autoprefixer": "postcss --use autoprefixer -o theme-style.css theme-style.css"
   },
   "version": "0.1.0"
 }
