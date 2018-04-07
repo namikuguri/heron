@@ -865,20 +865,7 @@ a.keyword {
 
 // Hatena Module
 .hatena-module {
-  a {
-    color: $theme-color;
-  }
-  .hatena-module-title {
-    a {
-      color: $black;
-      &:hover {
-        text-decoration: none;
-      }
-      &:visited {
-        color: $black;
-      }
-    }
-  }
+  @include hatena-module;
 }
 
 #box2-inner { // サイドバーのスタイル。モバイルのときなど表示が違うので、サイドバーに限定したいスタイルは #box1 に影響しないようにカスケーディングする
@@ -886,12 +873,6 @@ a.keyword {
     box-sizing: border-box;
     margin-bottom: 0;
   }
-}
-
-.hatena-module-title {
-  margin-top: 0;
-  margin-bottom: $base-size;
-  font-weight: bold;
 }
 
 .hatena-urllist {

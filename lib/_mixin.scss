@@ -77,3 +77,27 @@
     margin-top: $xxxlarge-size;
   }
 }
+
+@mixin hatena-module-header {
+  @include h4;
+  margin-top: 0;
+  a {
+    color: $black;
+    &:hover {
+      text-decoration: none;
+    }
+    &:visited {
+      color: $black;
+    }
+  }
+}
+
+// はてなモジュール
+@mixin hatena-module {
+  .hatena-module-title {
+    @include hatena-module-header;
+  }
+  a {
+    color: $theme-color;
+  }
+}

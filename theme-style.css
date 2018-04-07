@@ -739,24 +739,29 @@ a.keyword {
   margin-top: 0.5rem;
   margin-bottom: 0; }
 
+.hatena-module .hatena-module-title {
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.25;
+  margin-top: 1.9994rem;
+  margin-bottom: 1rem;
+  margin-top: 0; }
+  @media screen and (min-width: 40rem) {
+    .hatena-module .hatena-module-title {
+      font-size: 1rem; } }
+  .hatena-module .hatena-module-title a {
+    color: #2e2e2e; }
+    .hatena-module .hatena-module-title a:hover {
+      text-decoration: none; }
+    .hatena-module .hatena-module-title a:visited {
+      color: #2e2e2e; }
+
 .hatena-module a {
   color: #0000ff; }
-
-.hatena-module .hatena-module-title a {
-  color: #2e2e2e; }
-  .hatena-module .hatena-module-title a:hover {
-    text-decoration: none; }
-  .hatena-module .hatena-module-title a:visited {
-    color: #2e2e2e; }
 
 #box2-inner .hatena-module {
   box-sizing: border-box;
   margin-bottom: 0; }
-
-.hatena-module-title {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-weight: bold; }
 
 .hatena-urllist {
   margin-top: 1rem;
