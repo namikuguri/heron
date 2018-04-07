@@ -82,62 +82,25 @@ mark {
   color: $black;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
-}
-
 h1 {
-  margin-top: $xxxlarge-size;
-  margin-bottom: $large-size;
-  font-size: $xlarge-size;
-  line-height: 1.25;
-  @include break {
-    font-size: $xxlarge-size;
-  }
+  @include h1;
 }
 
 h2 {
-  margin-top: $xxlarge-size;
-  margin-bottom: $large-size;
-  font-size: $large-size;
-  line-height: 1.25;
-  @include break {
-    font-size: $xlarge-size;
-  }
+  @include h2;
 }
 
 h3 {
-  margin-top: $xxlarge-size;
-  margin-bottom: $large-size;
-  font-size: $base-size;
-  @include break {
-    font-size: $large-size;
-  }
+  @include h3;
 }
 
 h4 {
-  margin-top: $xxlarge-size;
-  margin-bottom: $large-size;
-  font-size: $small-size;
-  @include break {
-    font-size: $base-size;
-  }
+  @include h4;
 }
 
 h5,
 h6 {
-  margin-top: $xxlarge-size;
-  margin-bottom: $large-size;
-  font-size: $small-size;
-  color: $dark-gray;
-  @include break {
-    font-size: $base-size;
-  }
+  @include h5-6;
 }
 
 img {
@@ -1123,16 +1086,7 @@ a.keyword {
 *********************/
 // Archive
 .archive-heading {
-  margin-top: 0;
-  margin-bottom: $xlarge-size;
-  font-size: $xlarge-size;
-  @include break {
-    font-size: $xxlarge-size;
-  }
-}
-
-.ad + .archive-heading {
-  margin-top: $xxlarge-size;
+  @include page-header;
 }
 
 .page-archive {
@@ -1180,36 +1134,19 @@ a.keyword {
 
 // Category (Archive/Cateroy)
 .archive-header-category {
-  margin-top: 0;
-  margin-bottom: $xlarge-size;
-  .archive-heading { // 既存スタイルの上書き
-    margin-bottom: $xlarge-size;
-    font-size: $xlarge-size;
-    @include break {
-      font-size: $xxlarge-size;
-    }
+  @include page-header-container;
+  .archive-heading {
+    @include page-header;
   }
-}
-
-.ad + .archive-header-category {
-  margin-top: $xxlarge-size;
 }
 
 // Search
 .search-result {
-  margin-top: 0;
-  margin-bottom: $xxlarge-size;
-  .archive-heading { // 既存スタイルの上書き
+  @include page-header-container;
+  .archive-heading {
+    @include page-header;
     margin-bottom: $base-size;
-    font-size: $xlarge-size;
-    @include break {
-      font-size: $xxlarge-size;
-    }
   }
-}
-
-.ad + .search-result {
-  margin-top: $xxlarge-size;
 }
 
 .page-archive {

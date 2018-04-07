@@ -1,3 +1,4 @@
+// Clearfix
 @mixin clear {
   &:after {
     content: "";
@@ -6,8 +7,73 @@
   }
 }
 
+// ブレークポイント
 @mixin break {
   @media screen and (min-width: #{$content-size}) {
     @content;
+  }
+}
+
+// 見出し
+@mixin header-base($font-size) {
+  font-size: $font-size;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+@mixin h1 {
+  @include header-base($xlarge-size);
+  @include break {
+    font-size: $xxlarge-size;
+  }
+  margin-top: $xxxlarge-size;
+  margin-bottom: $xlarge-size;
+}
+
+@mixin h2 {
+  @include header-base($large-size);
+  @include break {
+    font-size: $xlarge-size;
+  }
+  margin-top: $xxlarge-size;
+  margin-bottom: $large-size;
+}
+
+@mixin h3 {
+  @include header-base($base-size);
+  @include break {
+    font-size: $large-size;
+  }
+  margin-top: $xxlarge-size;
+  margin-bottom: $large-size;
+}
+
+@mixin h4 {
+  @include header-base($small-size);
+  @include break {
+    font-size: $base-size;
+  }
+  margin-top: $xlarge-size;
+  margin-bottom: $base-size;
+}
+
+@mixin h5-6 {
+  @include h4;
+  color: $dark-gray;
+}
+
+@mixin page-header-container {
+  margin-top: 0;
+  margin-bottom: $xlarge-size;
+  .ad + & {
+    margin-top: $xxxlarge-size;
+  }
+}
+
+@mixin page-header {
+  @include h1;
+  margin-top: 0;
+  .ad + & {
+    margin-top: $xxxlarge-size;
   }
 }
