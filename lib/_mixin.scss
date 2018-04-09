@@ -19,6 +19,14 @@
   font-size: $font-size;
   font-weight: bold;
   line-height: 1.25;
+  a {
+    color: $black;
+    &:hover,
+    &:visited {
+      color: $black;
+      text-decoration: none;
+    }
+  }
 }
 
 @mixin h1 {
@@ -92,6 +100,12 @@
   }
 }
 
+@mixin archive-entry-title {
+  @include h3;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 // はてなモジュール
 @mixin hatena-module {
   .hatena-module-title {
@@ -99,5 +113,61 @@
   }
   a {
     color: $theme-color;
+  }
+}
+
+// サムネイル画像
+@mixin thumb {
+  margin-right: $base-size;
+  width: $xxxlarge-size;
+  height: $xxxlarge-size;
+  border-radius: $r;
+}
+
+// 日付
+@mixin date {
+  color: $black;
+  font-weight: bold;
+}
+
+// カテゴリー
+@mixin category {
+  a {
+    display: inline-block;
+    margin-right: $half-size;
+    padding-bottom: $quarter-size;
+    border-bottom: 4px solid $theme-sub-color;
+    color: $theme-color;
+    line-height: 1;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+// はてなキーワード
+@mixin hatena-keyword {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+// ボタン
+@mixin button {
+  display: inline-block;
+  padding: $half-size $small-size;
+  border: 1px solid $theme-color;
+  border-radius: $r;
+  font-size: $small-size;
+  color: $theme-color;
+  line-height: 1;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    opacity: $opacity;
+    transition: $delay;
   }
 }

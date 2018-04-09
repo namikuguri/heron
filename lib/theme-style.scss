@@ -255,11 +255,6 @@ table {
   }
 }
 
-#container {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 // Header
 #blog-title {
   background: $white;
@@ -321,47 +316,18 @@ table {
 /********************
 * Module
 *********************/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  a {
-    color: $black;
-    &:hover,
-    &:visited {
-      color: $black;
-      text-decoration: none;
-    }
-  }
-}
-
 a.keyword {
-  border-bottom: 1px dotted $gray;
-  color: $black;
+  @include hatena-keyword;
 }
 
 .date {
   a {
-    color: $black;
+    @include date;
   }
 }
 
 .categories {
-  a {
-    display: inline-block;
-    margin-right: $half-size;
-    padding-bottom: $quarter-size;
-    border-bottom: 4px solid $theme-sub-color;
-    color: $theme-color;
-    line-height: 1;
-
-    &:hover {
-      text-decoration: none;
-      border-bottom-color: transparent;
-    }
-  }
+  @include category;
 }
 
 .bookmark-widget-counter {
@@ -421,7 +387,7 @@ a.keyword {
     margin-bottom: 0;
   }
   .entry-date {
-    font-weight: bold;
+    @include date;
   }
   .entry-categories {
     margin-top: $quarter-size;
@@ -431,13 +397,7 @@ a.keyword {
     top: 2.5rem;
     left: -5rem;
     a {
-      padding: $half-size $small-size;
-      border: 1px solid $theme-color;
-      border-radius: $r;
-      color: $theme-color;
-      line-height: 1;
-      cursor: pointer;
-      text-decoration: none;
+      @include button;
     }
   }
 }
@@ -454,8 +414,7 @@ a.keyword {
     }
   }
   a.keyword {
-    border-bottom: none;
-    text-decoration: none;
+    @include hatena-keyword;
   }
   img {
     max-width: 100%;
@@ -682,20 +641,7 @@ a.keyword {
     }
   }
   .leave-comment-title {
-    display: inline-block;
-    padding: $half-size $small-size;
-    border-radius: $r;
-    border: 1px solid $theme-color;
-    color: $theme-color;
-    text-align: center;
-    vertical-align: middle;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: $small-size;
-    &:hover {
-      opacity: $opacity;
-      transition: $delay;
-    }
+    @include button;
   }
   .hatena-module-related-entries {
     .hatena-module-title {
@@ -717,10 +663,7 @@ a.keyword {
     .urllist-with-thumbnails {
       li {
         .urllist-image {
-          margin-right: $base-size;
-          width: $xxxlarge-size;
-          height: $xxxlarge-size;
-          border-radius: $r;
+          @include thumb;
         }
       }
     }
@@ -884,9 +827,8 @@ a.keyword {
     font-size: $base-size;
   }
   .urllist-date-link {
-    line-height: $neg-ratio;
     a {
-      color: $black;
+      @include date;
     }
   }
   .urllist-category-link {
@@ -1077,26 +1019,19 @@ a.keyword {
     &:first-child {
       margin-top: 0; // 執筆者リストではアーカイブ一覧のタイトルがないので、一覧の先頭にできる不要な余白を表示しない
     }
+    .entry-title {
+      @include archive-entry-title;
+    }
     .date {
       a {
-        color: $black;
-        font-weight: bold;
+        @include date;
       }
-    }
-    .entry-title {
-      margin-top: 0;
-      margin-bottom: 0;
-      font-size: $large-size;
-      line-height: $neg-ratio;
     }
     .categories {
       margin-bottom: $base-size;
     }
     .entry-thumb {
-      margin-right: $base-size;
-      width: $xxxlarge-size;
-      height: $xxxlarge-size;
-      border-radius: $r;
+      @include thumb;
     }
     .entry-description {
       margin-top: 0;
